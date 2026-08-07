@@ -25,11 +25,11 @@ export default function About() {
                             <p className="py-5 text-black">
                                 Below is something completely unrelated that I designed:
                             </p>
-                            <div className="rounded-lg bg-linear-to-tr from-yellow-300 via-red-400 to-pink-400 p-4 text-center shadow-md">
+                            <div className="rounded-lg bg-linear-to-tr from-yellow-300 via-red-400 to-pink-400 p-4 text-center shadow-lg">
                                 <h2 className="p-4 font-mono text-xl font-extrabold text-white">
                                     Here is a Story...
                                 </h2>
-                                <p className="rounded-lg bg-white p-3 text-left indent-8 font-mono font-bold text-teal-500">
+                                <p className="rounded-lg bg-white p-3 text-left indent-8 font-mono font-bold text-teal-500 shadow-lg">
                                     Once upon a time, there was a man named Harry. He found a mysterious green button on a screen. He pressed the button, and kept pressing it. He pressed the button: {count} times.
                                 </p>
                                 <div className="py-4 flex justify-center gap-4">

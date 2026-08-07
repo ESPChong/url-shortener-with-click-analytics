@@ -23,6 +23,12 @@
 
 ---
 
+### Design Architecture
+
+- This web application is designed based on a Code-First Design Approach. The API documentation is designed after the codebase is nearing completion. 
+- This approach was chosen to provide flexibility to this project, as it is exploratory and focused on providing a good learning experience.
+
+
 ### **Regarding AI Use**:
 
 - This web app promises to use **ZERO AI generated code**. From the first commit onwards. This remark will be left in this README.md file as a testament to this promise.
