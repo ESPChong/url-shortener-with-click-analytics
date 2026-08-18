@@ -32,7 +32,7 @@ export default function SimpleFaq({ paginatedData }: { paginatedData: PaginatedD
 
         {/* Previous Button: Only show as a link if we are NOT on page 1 */}
         {current_page > 1 ? (
-          <Link href={`/simplefaq?page=${current_page - 1}`}>Previous</Link>
+          <Link href={`/v1/simplefaq?page=${current_page - 1}`}>Previous</Link>
         ) : (
           <span style={{ color: 'gray' }}>Previous</span>
         )}
@@ -43,7 +43,7 @@ export default function SimpleFaq({ paginatedData }: { paginatedData: PaginatedD
 
         {/* Next Button: Only show as a link if we are NOT on the last page */}
         {current_page < last_page ? (
-          <Link href={`/simplefaq?page=${current_page + 1}`}>Next</Link>
+          <Link href={`/v1/simplefaq?page=${current_page + 1}`}>Next</Link>
         ) : (
           <span style={{ color: 'gray' }}>Next</span>
         )}

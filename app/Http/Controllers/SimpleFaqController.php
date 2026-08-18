@@ -15,7 +15,8 @@ class SimpleFaqController extends Controller
         // 1. Simple array of 10 items
         $items = [
             'Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5',
-            'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10'
+            'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10',
+            'Item 11', 'Item 12'
         ];
 
         $perPage = 3; // Show 3 items per page
@@ -44,7 +45,7 @@ class SimpleFaqController extends Controller
 
         // 4. Send to React as a simple array
         return Inertia::render('simplefaq', [
-            'paginatedData' => $paginator->toArray()
+            'paginatedData' => $paginator->jsonSerialize()
         ]);
     }
 }
