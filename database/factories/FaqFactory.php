@@ -30,7 +30,7 @@ class FaqFactory extends Factory
      */
     public function placeholder(): static
     {
-        // this is how to define a custom state for factories in Laravel
+        // this is how to define a (simple) custom state for factories in Laravel
         return $this->state([
             'question' => 'Placeholder Question?',
             'answer' => 'Placeholder Answer.'

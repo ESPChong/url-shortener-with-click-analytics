@@ -45,7 +45,7 @@ class FaqSeeder extends Seeder
 
             // Factory
             $faqCount = count($definedFaqs);
-            Faq::factory()->count($faqCount)->placeholder()->create();
+            Faq::factory()->count(30 - $faqCount)->placeholder()->create();
         });
     }
 }
