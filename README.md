@@ -1,6 +1,6 @@
 # URL Shortener Web App with Click Analytics Dashboard 
 
-- Designed Using Laravel, React, Inertia.js and Tailwind CSS.
+- Designed Using Laravel, React, Inertia.js and Tailwind CSS, with SQLite as the database engine.
 
 ---
 
@@ -12,7 +12,7 @@
 ### Some details:
 
 - First proper goal-driven Laravel + React + Inertia.js + Tailwind CSS project with pre-determined objectives by me
-- This project will be utilised as a learning experience to how to build end-to-end Laravel + Vue.js projects
+- This project will be utilised as a learning experience to how to build end-to-end Laravel + React projects
 
 - Initial Objectives:
 	- Nice frontend UI design
