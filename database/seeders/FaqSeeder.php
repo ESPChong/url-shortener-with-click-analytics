@@ -22,14 +22,15 @@ class FaqSeeder extends Seeder
                 ['question' => 'Why does this page exist?', 'answer' => 'It exists for me to try more stuff with Tailwind CSS.'],
                 ['question' => 'What is this web app?', 'answer' => 'A URL Shortener with a Click Analytics Dashboard.'],
                 ['question' => 'Why was this web app developed?', 'answer' => 'To be a Laravel, React, Inertia and Tailwind CSS learning project.'],
-                ['question' => 'What is the tech stack for this project?', 'answer' => 'Laravel, React, Inertia, Tailwind CSS, MySQL, Redis and Docker.'],
+                ['question' => 'What is the tech stack for this project?', 'answer' => 'Laravel, React, Inertia, Tailwind CSS, SQLite, Redis and Docker.'],
                 ['question' => 'How many endpoints does this web app have?', 'answer' => '3.'],
                 ['question' => 'What are the endpoints?', 'answer' => '/shorten, /redirect and /dashboard.'],
                 ['question' => 'Who is the developer?', 'answer' => 'My name is Corrin.'],
                 ['question' => 'Is there a GitHub repo?', 'answer' => 'Yes, here is the link: (https://github.com/ESPChong/url-shortener-with-click-analytics).'],
                 ['question' => 'Is this project using SQL or NoSQL?', 'answer' => 'It is using SQL.'],
-                ['question' => 'Which SQL is being used for this project', 'answer' => 'MySQL.'],
+                ['question' => 'Which SQL is being used for this project', 'answer' => 'SQLite.'],
                 ['question' => 'Why is SQL chosen for this webapp?', 'answer' => 'For its ACID properties and Analytics Capabilities.'],
+                ['question' => 'What are the advantages of React over Vue?', 'answer' => 'React has React Native, which seamlessly bridges the web app to mobile devices, which Vue does not have.']
             ];
 
             foreach ($definedFaqs as $faq){
