@@ -1,6 +1,8 @@
 # URL Shortener Web App with Click Analytics Dashboard 
 
 - Designed Using Laravel, React, Inertia.js and Tailwind CSS, with SQLite as the database engine.
+- There are two main endpoints: a URL shortener page and a dashboard
+- There is also a FAQ page and About page
 
 ---
 
