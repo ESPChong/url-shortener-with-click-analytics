@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('clicks', function (Blueprint $table) {
             $table->id();
+            $table->string('url_id');
+            $table->integer('redirect_time_ms')->default(0);
             $table->timestamps();
         });
     }
