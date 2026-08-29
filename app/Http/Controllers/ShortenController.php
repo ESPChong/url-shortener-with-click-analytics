@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Url;
+use App\Helpers\Base62;
 
 use Inertia\Inertia;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 class ShortenController extends Controller {
     public function index(Request $request)
@@ -24,8 +24,13 @@ class ShortenController extends Controller {
             'long_url' => 'required|url',
         ]);
 
-        // random string for shortUrl
-        $shortUrl = Str::random(7);
+        // generate short URL
+        $shortUrl = Base62::generateShortUrl();
+
+        // Ensure uniqueness to prevent collision
+        while (Url::where('short_url', $shortUrl)->exists()) {
+            $shortUrl = Base62::generateShortUrl();
+        }
 
         // create an entry in the url table
         Url::create([

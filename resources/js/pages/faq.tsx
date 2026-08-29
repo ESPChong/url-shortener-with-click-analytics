@@ -35,7 +35,7 @@ export default function Faq({ faqs }: { faqs: PaginatedFaqs }) {
           const globalIndex = (current_page - 1) * per_page + index + 1;
 
           return (
-            <Fragment key={faq.id || index}> {/* Replaced React.Fragment with Fragment */}
+            <Fragment key={faq.id || index}>
               <li className="w-full px-4 py-2 border-l-8 border-l-red-500 border-b text-black">
                 {globalIndex}. {faq.question}
               </li>
