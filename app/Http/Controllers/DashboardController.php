@@ -18,7 +18,7 @@ class DashboardController extends Controller
 
         $avgRedTime = Click::avg('redirect_time_ms');
 
-        return Inertia::render('dashboard', [
+        return Inertia::render('dash', [
             'stats' => [
                 'total_shortens' => $totalShortens,
                 'shortens_today' => $shortensToday,
