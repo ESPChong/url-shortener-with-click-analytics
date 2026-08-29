@@ -2,15 +2,20 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
-use App\Http\Controllers\SimpleFaqController;
+use App\Http\Controllers\ShortenController;
+use App\Http\Controllers\RedirectController;
 
 // Static Pages
-Route::inertia('/v1', 'welcome')->name('home');
-Route::inertia('/v1/about', 'about')->name('about');
+Route::inertia('/', 'welcome')->name('home');
+Route::inertia('/about', 'about')->name('about');
 
 // Dynamic Pages
-Route::get('/v1/faq', [FaqController::class, 'index'])->name('faq.index');
-Route::get('/v1/simplefaq', [SimpleFaqController::class, 'index'])->name('simplefaq.index');
+Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+
+Route::get('/shorten', [ShortenController::class, 'index'])->name('shorten.index');
+Route::post('/shorten', [ShortenController::class, 'store'])->name('shorten.store');
+
+Route::get('/r/{short_url}', [RedirectController::class, 'show'])->name('redirect.show');
 
 // Middleware Required Pages
 Route::middleware(['auth', 'verified'])->group(function () {

@@ -54,7 +54,7 @@ export default function Faq({ faqs }: { faqs: PaginatedFaqs }) {
           <li>
             {current_page > 1 ? (
               <Link
-                href={`/v1/faq?page=${current_page - 1}`}
+                href={`/faq?page=${current_page - 1}`}
                 className="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium rounded-s-base text-sm px-3 h-10 focus:outline-none"
               >
                 Previous
@@ -70,7 +70,7 @@ export default function Faq({ faqs }: { faqs: PaginatedFaqs }) {
           {Array.from({ length: last_page }, (_, i) => i + 1).map((n) => (
             <li key={n}>
               <Link
-                href={`/v1/faq?page=${n}`}
+                href={`/faq?page=${n}`}
                 aria-current={current_page === n ? 'page' : undefined}
                 className={
                   'flex items-center justify-center box-border border border-default-medium font-medium text-sm w-10 h-10 focus:outline-none ' +
@@ -88,7 +88,7 @@ export default function Faq({ faqs }: { faqs: PaginatedFaqs }) {
           <li>
             {current_page < last_page ? (
               <Link
-                href={`/v1/faq?page=${current_page + 1}`}
+                href={`/faq?page=${current_page + 1}`}
                 className="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading font-medium rounded-e-base text-sm px-3 h-10 focus:outline-none"
               >
                 Next
