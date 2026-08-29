@@ -29,7 +29,7 @@ export default function Dashboard({ stats } : { stats : StatProps }) {
             <Head title="Dashboard" />
             <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
                 <div className="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md">
-                    <h1 className="text-2xl font-bold mb-8 text-center text-gray-800">Dashboard</h1>
+                    <h1 className="py-5 text-4xl font-bold mb-8 text-center text-gray-800">Click Analytics Engine</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-gray-50 rounded-lg text-center">
