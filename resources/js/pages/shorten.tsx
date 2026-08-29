@@ -1,10 +1,6 @@
-import { Head, Link, useForm } from '@inertiajs/react';
+import { Head, useForm } from '@inertiajs/react';
 import { useState } from 'react';
 import type { ChangeEvent, SyntheticEvent } from 'react';
-
-interface FlashProps {
-    shortUrl?: string;
-}
 
 export default function Shorten() {
     const [shortenedUrl, setShortenedUrl] = useState<string | null>(null);
@@ -18,11 +14,15 @@ export default function Shorten() {
         post('/shorten', {
             preserveScroll: true,
             onSuccess: (page) => {
-                const props = page.props as unknown as { flash?: FlashProps };
+                const props = page.props as unknown as { shortUrl?: string };
 
-                if (props.flash?.shortUrl) {
-                    setShortenedUrl(props.flash.shortUrl);
+                if (props.shortUrl) {
+                    setShortenedUrl(props.shortUrl);
                 }
+            },
+            onError: (errors) => {
+                // If validation fails or the server crashes, it comes here.
+                console.error("Submission failed. Errors:", errors);
             }
         });
     };
@@ -35,6 +35,8 @@ export default function Shorten() {
         }
     };
 
+    // Note: If your backend returns a FULL URL (e.g., http://localhost/r/abc),
+    // you should change this to just: `const redirectUrl = shortenedUrl;`
     const redirectUrl = shortenedUrl ? `/r/${shortenedUrl}` : null;
 
     return (
@@ -68,14 +70,14 @@ export default function Shorten() {
                     {redirectUrl && (
                         <div className="mt-6 p-4 bg-green-50 rounded-md text-center">
                             <p className="text-sm text-gray-600">Your shortened URL:</p>
-                            <Link
-                                href={redirectUrl}
+                            <a
+                                href={"http://127.0.0.1:8000"+redirectUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-indigo-600 font-semibold break-all hover:underline"
                             >
                                 {redirectUrl}
-                            </Link>
+                            </a>
                         </div>
                     )}
                 </div>

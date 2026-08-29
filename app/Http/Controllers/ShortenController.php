@@ -9,9 +9,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class ShortenController extends Controller {
-    public function index()
+    public function index(Request $request)
     {
-        return Inertia::render('shorten');
+        $shortUrl = $request->session()->get('shortUrl');
+
+        return Inertia::render('shorten', [
+            'shortUrl' => $shortUrl,
+        ]);
     }
 
     public function store(Request $request)
