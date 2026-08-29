@@ -15,7 +15,7 @@
 - This project will be utilised as a learning experience to how to build end-to-end Laravel + React projects
 
 - Initial Objectives:
-	- Nice frontend UI design
+	- Simple and clean frontend UI design
 	- Click Analytics Dashboard
 	- Basic Security and Authentication Practices
 	- Production Ready setup with Docker containerisation (Ready for scaling)
