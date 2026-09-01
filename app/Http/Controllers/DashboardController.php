@@ -6,8 +6,22 @@ use App\Models\Click;
 use App\Models\Url;
 use Inertia\Inertia;
 
+use OpenApi\Attributes as OA;
+
 class DashboardController extends Controller
 {
+    #[OA\Get(
+        path: '/dash',
+        summary: 'Display Dashboard Page',
+        description: 'Renders the Inertia.js dashboard page for displaying click analytics.',
+        tags: ['UI Pages'],
+        responses: [
+            new OA\Response(
+                response: 200,
+                description: 'Inertia page rendered successfully.'
+            )
+        ]
+    )]
     public function index()
     {
         $totalShortens = Url::count();
