@@ -573,7 +573,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] Kubernetes deployment manifests
 
 ###  Future Enhancements
-- [ ] AI-powered URL suggestions (planned for later stages) 
+- [ ] AI-powered URL suggestions
 - [ ] Advanced geographic analytics
 - [ ] Custom URL expiration
 - [ ] Team collaboration features
