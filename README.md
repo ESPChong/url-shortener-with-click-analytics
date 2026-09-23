@@ -1,5 +1,5 @@
-#  Distributed URL Shortener & Click Analytics Engine
-A production-ready, distributed URL shortener service with comprehensive click analytics, built with a modern PHP/TypeStack and deployed via Kubernetes.
+#  Brief - A Production-Ready URL Shortener & Click Analytics Engine
+This is Brief - a production-ready, distributed URL shortener service with comprehensive click analytics, built with a modern PHP/TypeStack and deployed via Kubernetes.
 
 ##  Overview
 
@@ -579,17 +579,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Team collaboration features
 - [ ] Enhanced security with 2FA
 
-###  Project Metrics
-- **Languages:** TypeScript 65.1%, PHP 32.6%, CSS 1.1%, Other 1.2% 
-- **Commit History:** 19 commits 
-- **Last Updated:** September 1, 2026 
-
 ---
 
 **Repository:** [https://github.com/ESPChong/url-shortener-with-click-analytics](https://github.com/ESPChong/url-shortener-with-click-analytics) 
 **Author:** ESPChong   
 **Project Started:** July 27, 2026   
-**Last Updated:** September 22, 2026
 
 > **Note on AI Usage:** This project promises to use **ZERO AI generated code** from the first commit onwards. AI assistance is limited to non-code tasks and used only as a last resort for problem-solving.
 
