@@ -9,7 +9,7 @@ class Click extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['url_id', 'redirect_time_ms'];
+    protected $fillable = ['url_id', 'redirect_time_ms', 'ip_hash', 'referrer', 'country'];
 
     public function url()
     {
